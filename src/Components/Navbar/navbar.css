@@ -4,8 +4,7 @@
     position: fixed;
     top:0;
     left:0;
-    background-color: transparent;
-    backdrop-filter: blur(4px);
+    background-color: rgba(255,255,255,0.8);
     box-shadow: 1px 1px 2px rgba(0,0,0,.3);
     z-index: 10;
     display: flex;
@@ -16,6 +15,7 @@
 .inner-nav{
     width: 90%;
     height: 100%;
+    max-width: 1600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,6 +23,8 @@
 
 .logo{
     object-fit: contain;
+    height: 95%;
+
 }
 
 .nav-items{
@@ -30,8 +32,9 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: white;
-    font-size: 28px;
+    color:black;
+    font-size: 24px;
+    white-space: nowrap;
     list-style-type: none;
     
 }
