@@ -4,7 +4,7 @@ import uniqid from 'uniqid'
 export const RecipeItem = ({ recipe }) => {
     return (
         <div className="recipe-item-container">
-            <img style={{borderRadius:'8px'}} src={recipe.image} />
+            <img src={recipe.image} />
             <div className='recipe-info'>
                 <h3 className='recipe-title'>{recipe.label}</h3>
                 <ul className='health-list'>

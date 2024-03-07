@@ -8,10 +8,13 @@ import axios from "axios";
 export const RecipeSearch = ({setrecipes, recipes}) => {
 
     const [serachList, setSearchList] = useState([])
-    const [query, setQuery] = useState()
+    const [query, setQuery] = useState(null)
 
     useEffect(() => {
-        setQuery(serachList.join(' '))
+        if(serachList.length > 0){
+
+            setQuery(serachList.join(' '))
+        } 
     }, [serachList])
 
     const handleSubmit = (e) => {
@@ -60,9 +63,12 @@ export const RecipeSearch = ({setrecipes, recipes}) => {
                                             <IoMdClose size={20} /></button>
                                     </p>)}
                             </div>
+                            {serachList.length !== 0  ?
                             <button onClick={() => getrecipes()} className="form-btn">
                                 Search
                             </button>
+                            : null
+                            }   
                         </div>
                     </div>
 

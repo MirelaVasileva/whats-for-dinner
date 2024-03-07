@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const Navbar = () => {
 
-    const [navOpen, setNavOpen]= useState(true)
+    const [navOpen, setNavOpen]= useState(false)
 
     return (
         <div id="navbar">

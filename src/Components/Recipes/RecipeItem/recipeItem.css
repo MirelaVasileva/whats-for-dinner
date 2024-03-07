@@ -1,23 +1,28 @@
 .recipe-item-container{
-    width: 49.5%;
+    width: 98%;
     height: 350px;
     margin-bottom: 1rem;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap:2rem;
+    background-color: #f6f6f6;
+    border-radius:8px;
     padding: 2rem;
-  background-color: #f6f6f6;
-  border-radius:8px;
-  @media screen and(max-width:800px) {
-    width: 95%;
+  @media screen and (max-width:800px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     height: auto;
     min-height: 350px;
   }
 }
+
 .recipe-info{
     height: 100%;
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
@@ -37,11 +42,15 @@
    flex-direction: column;
     gap:10px;
 }
+img{
+    border-radius: 8px;
+}
 .diet-labels{
     display: flex;
     justify-content: space-evenly;
     align-items: start;
     flex-wrap: wrap;
+    margin-top: auto;
     gap:10px;
 }
 .recipe-title{

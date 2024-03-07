@@ -1,10 +1,12 @@
 .recipe-container{
     width: 100%;
-    min-height: 20vh;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 2rem;
-    align-items: center;
-    overflow-y: auto;
+    @media screen and (max-width: 1000px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
