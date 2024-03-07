@@ -1,0 +1,9 @@
+.recipe-main{
+width: 90%;
+max-width: 1600px;
+height: 100%;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}

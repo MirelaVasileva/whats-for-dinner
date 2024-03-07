@@ -1,15 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import { Hero } from './Components/Hero/Hero';
 import { Navbar } from './Components/Navbar/Navbar';
-import { RecipeSearch } from './Components/RecipeSearch/RecipeSearch';
+import { RecipeMain } from './Components/RecipeSearch/RecipeMain';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
       <Hero />
-      <RecipeSearch />
+      <RecipeMain />
     </div>
   );
 }
