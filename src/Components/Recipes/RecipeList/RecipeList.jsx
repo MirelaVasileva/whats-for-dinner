@@ -2,9 +2,13 @@ import { RecipeItem } from "../RecipeItem/RecipeItem.jsx"
 import '../RecipeItem/RecipeItem.jsx'
 import uniqid from 'uniqid'
 import './recipeList.css'
+import { useContext } from "react"
+import { RecipeContext } from "../../../RecipeContext.js"
 
+export const RecipeList = () =>{
+    
+    const {recipes} = useContext(RecipeContext)
 
-export const RecipeList = ({recipes}) =>{
     return(
         <div className="recipe-container">
             {recipes !== null && recipes.length !== 0 

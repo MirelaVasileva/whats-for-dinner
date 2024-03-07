@@ -1,15 +1,16 @@
-import { useState } from "react"
+import { useContext } from "react"
 import { RecipeSearch } from "../RecipeSearch/RecipeSearch.jsx"
 import { RecipeList } from "../RecipeList/RecipeList.jsx"
 import './recipeMain.css'
+import { RecipeContext } from "../../../RecipeContext.js"
 
 export const RecipeMain = () =>{
 
-    const [recipes, setrecipes] = useState(null)
+    const { recipes,setRecipes } = useContext(RecipeContext)
 
     return (
         <div className="recipe-main">
-            <RecipeSearch setrecipes={setrecipes} recipes={recipes}/>
+            <RecipeSearch setrecipes={setRecipes} recipes={recipes}/>
             <RecipeList recipes={recipes}/>
         </div>
     )

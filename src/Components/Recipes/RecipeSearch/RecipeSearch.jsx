@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./recipeSearch.css"
 import { FaArrowRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import uniqid from 'uniqid'
 import axios from "axios";
+import { RecipeContext } from "../../../RecipeContext";
 
-export const RecipeSearch = ({setrecipes, recipes}) => {
+export const RecipeSearch = () => {
 
+    const {setRecipes} = useContext(RecipeContext)
     const [serachList, setSearchList] = useState([])
     const [query, setQuery] = useState(null)
 
@@ -23,15 +25,16 @@ export const RecipeSearch = ({setrecipes, recipes}) => {
         const res = Object.fromEntries(formData).search
         if (res && res !== '') {
             setSearchList(prev => Array.from(new Set([...prev, res])))
+
             e?.currentTarget?.reset()
         }
     }
 
-    const getrecipes = async () => {
+    const getRecipes = async () => {
         const response = await axios.get(
             `https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`
         )
-        setrecipes(response.data.hits);
+        setRecipes(response.data.hits);
     }
 
     const removeSelf = (item) => {
@@ -64,7 +67,7 @@ export const RecipeSearch = ({setrecipes, recipes}) => {
                                     </p>)}
                             </div>
                             {serachList.length !== 0  ?
-                            <button onClick={() => getrecipes()} className="form-btn">
+                            <button onClick={() => getRecipes()} className="form-btn">
                                 Search
                             </button>
                             : null
