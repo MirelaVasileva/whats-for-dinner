@@ -5,7 +5,7 @@ import { IoMdClose } from "react-icons/io";
 import uniqid from 'uniqid'
 import axios from "axios";
 
-export const RecipeSearch = ({setRecipies, recipies}) => {
+export const RecipeSearch = ({setrecipes, recipes}) => {
 
     const [serachList, setSearchList] = useState([])
     const [query, setQuery] = useState()
@@ -24,13 +24,12 @@ export const RecipeSearch = ({setRecipies, recipies}) => {
         }
     }
 
-    const getRecipies = async () => {
+    const getrecipes = async () => {
         const response = await axios.get(
             `https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`
         )
-        setRecipies(response.data.hits);
+        setrecipes(response.data.hits);
     }
-    console.log(recipies);
 
     const removeSelf = (item) => {
         const res = serachList.filter(elem => elem !== item)
@@ -59,7 +58,7 @@ export const RecipeSearch = ({setRecipies, recipies}) => {
                                             <IoMdClose size={20} /></button>
                                     </p>)}
                             </div>
-                            <button onClick={() => getRecipies()} className="form-btn">
+                            <button onClick={() => getrecipes()} className="form-btn">
                                 Search
                             </button>
                         </div>

@@ -2,7 +2,6 @@ import './recipeItem.css'
 import uniqid from 'uniqid'
 
 export const RecipeItem = ({ recipe }) => {
-    console.log(recipe.tags);
     return (
         <div className="recipe-item-container">
             <img style={{borderRadius:'8px'}} src={recipe.image} />

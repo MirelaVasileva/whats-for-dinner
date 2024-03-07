@@ -1,7 +1,7 @@
 import './App.css';
 import { Hero } from './Components/Hero/Hero';
 import { Navbar } from './Components/Navbar/Navbar';
-import { RecipeMain } from './Components/RecipeSearch/RecipeMain';
+import { RecipeMain } from './Components/Recipes/RecipeMain/RecipeMain.jsx';
 
 function App() {
   return (
