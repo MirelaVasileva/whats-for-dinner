@@ -24,7 +24,22 @@
 .logo{
     object-fit: contain;
     height: 95%;
+    
+}
 
+.nav-toggle{
+    display: none;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 24px;
+    @media screen and (max-width:800px) {
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin-left: auto;
+    }
 }
 
 .nav-items{
@@ -36,7 +51,22 @@
     font-size: 24px;
     white-space: nowrap;
     list-style-type: none;
-    
+    @media screen and (max-width: 800px) {
+        display: none;
+        &.open {
+            height: 100vh;
+            width: 100%;
+            z-index: 99;
+            background-color: rgba(255,255,255,.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center; 
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 .nav-items > li {
     cursor: pointer;

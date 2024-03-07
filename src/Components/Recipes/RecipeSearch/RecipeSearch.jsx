@@ -36,6 +36,7 @@ export const RecipeSearch = ({setrecipes, recipes}) => {
         setSearchList(res)
     }
 
+
     return (
             <div id="recipe-search">
                 <section className="inner-recipe">
@@ -45,12 +46,11 @@ export const RecipeSearch = ({setrecipes, recipes}) => {
                                 add to search list
                             </label>
                             <input name="search" className="input" />
-                            <button type="submit" className="form-btn">
+                            <button type="submit" className="arrow form-btn">
                                 <FaArrowRight size={20} />
                             </button>
                         </form>
                         <div className="search-field">
-
                             <div className="search-items">
                                 {serachList.map((item, i) =>
                                     <p className="item" key={uniqid}>{item}

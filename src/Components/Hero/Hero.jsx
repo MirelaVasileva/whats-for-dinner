@@ -2,6 +2,7 @@ import './hero.css'
 // import hero from '../../images/hero.jpg'
 
 export const Hero = () => {
+    
     return (
         <div id='hero-div'>
             <div className='hero-img-div'>

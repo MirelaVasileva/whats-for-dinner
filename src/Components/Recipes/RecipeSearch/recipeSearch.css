@@ -1,10 +1,10 @@
 #recipe-search{
     width: 100%;
-    min-height: 20vh;
     display:flex;
     justify-content: center;
     align-items: start;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 .inner-recipe{
     width: 100%;
@@ -28,17 +28,25 @@
     background-color: white;
     justify-content: space-between;
     border:2px solid rgb(36, 179, 50);
+
+    @media screen and (max-width:800px) {
+        flex-direction: column;
+            align-items: center;
+        
+    }
 }
 .form{
     width: 40%;
     height: 100px;
-    padding: 10px;
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 25px;
     white-space: nowrap;
     gap: 10px;
+    @media screen and (max-width:800px) {
+        width: 95%;
+    }
 }
 .form-btn{
     display:flex;
@@ -47,21 +55,27 @@
     border: none;
     cursor: pointer;
     padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius:10px;
     background-color:  rgb(36, 179, 50);
     color: white;
     padding: 10px;
     font-weight: 600;
     font-size: 16px;
-    transition: all 0.3s ease-in-out;
-
+    
 }
+.arrow{
+    @media screen and (max-width:800px) {
+        transform: rotate(90deg);
+    }
+}
+
 .form-btn:hover{
     background-color:  rgb(8, 142, 21);
 }
 .search-items{
     width: 85%;
-    padding: 10px;
     min-height: 50px;
     border-left: 2px solid white;
     display: flex;
@@ -69,8 +83,6 @@
     gap: 20px;
     align-items: center;
     flex-wrap: wrap;
-    border-right:2px solid rgb(36, 179, 50);
-    border-left:2px solid rgb(36, 179, 50);
 }
 
 .item{
@@ -93,9 +105,19 @@
 }
 .search-field{
     display: flex;
-    justify-content: space-evenly;
+    padding: 10px;
+    justify-content: space-between;
     align-items: center;
     width: 60%;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-left:2px solid rgb(36, 179, 50);
+
+        @media screen and (max-width:800px) {
+            width: 100%;
+        border:none;
+
+        border-top: 2px solid rgb(36, 179, 50);  
+
+        }
 }
