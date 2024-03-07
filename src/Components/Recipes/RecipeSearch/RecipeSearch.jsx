@@ -45,10 +45,12 @@ export const RecipeSearch = ({setrecipes, recipes}) => {
                             <label>
                                 add to search list
                             </label>
+                            <div className="search-pair">
                             <input name="search" className="input" />
                             <button type="submit" className="arrow form-btn">
                                 <FaArrowRight size={20} />
                             </button>
+                            </div>
                         </form>
                         <div className="search-field">
                             <div className="search-items">

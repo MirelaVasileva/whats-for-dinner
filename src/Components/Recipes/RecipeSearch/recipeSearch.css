@@ -20,6 +20,9 @@
     border-radius:10px;
     border:none;
     border:2px solid rgb(36, 179, 50);
+    @media screen and (max-width:1000px) {
+        width: 90%;
+    }
 }
 .search-div{
     width: 100%;
@@ -40,14 +43,23 @@
     height: 100px;
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     font-size: 25px;
     white-space: nowrap;
     gap: 10px;
+    padding: 10px;
     @media screen and (max-width:800px) {
         width: 95%;
+        flex-direction: column;
     }
 }
+.search-pair{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .form-btn{
     display:flex;
     justify-content: center;
