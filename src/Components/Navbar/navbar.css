@@ -33,7 +33,7 @@
     padding: 10px;
     border-radius: 8px;
     font-size: 24px;
-    @media screen and (max-width:800px) {
+    @media screen and (max-width:1000px) {
         z-index: 100;
         display: flex;
         justify-content: center;
@@ -51,7 +51,7 @@
     font-size: 24px;
     white-space: nowrap;
     list-style-type: none;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         display: none;
         &.open {
             height: 100vh;

@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
     background-position: 50%;
         
     }
@@ -34,7 +34,7 @@
     align-items: start;
     text-align: left;
     gap: 15px;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         width: 95%;
     }
 }

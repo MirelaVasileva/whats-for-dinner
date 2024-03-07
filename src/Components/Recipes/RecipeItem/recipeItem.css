@@ -1,21 +1,20 @@
 .recipe-item-container{
     width: 98%;
-    height: 350px;
+    min-height: 350px;
     margin-bottom: 1rem;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     gap:2rem;
     background-color: #f6f6f6;
     border-radius:8px;
     padding: 2rem;
-  @media screen and (max-width:800px) {
+  @media screen and (max-width:1000px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     height: auto;
-    min-height: 350px;
   }
 }
 
@@ -50,9 +49,41 @@ img{
     justify-content: space-evenly;
     align-items: start;
     flex-wrap: wrap;
-    margin-top: auto;
     gap:10px;
 }
 .recipe-title{
     font-size: 25px;
+}
+.read-more{
+    border: none;
+    background-color: transparent;
+    font-weight: 650;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.see-recipe-btn{
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    font-weight: 650;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius:10px;
+    background-color:  rgb(36, 179, 50);
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.see-recipe-btn:hover{
+    background-color:  rgb(8, 142, 21);
+}
+.diet-p{
+    border-radius: 16px;
+    background-color: rgb(131, 220, 140);
+    padding: 5px 10px;
 }
