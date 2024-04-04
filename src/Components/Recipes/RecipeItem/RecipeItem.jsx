@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
 import './recipeItem.css'
 import uniqid from 'uniqid'
+import { useNavigate } from 'react-router-dom'
 
 export const RecipeItem = ({ recipe }) => {
 
+const navigate = useNavigate()
+console.log(recipe.label);
     return (
         <div className="recipe-item-container">
             <img src={recipe.image} />
@@ -16,7 +19,7 @@ export const RecipeItem = ({ recipe }) => {
                         </p>)}
                 </div>
                 <IngredientList ingredients={recipe.ingredientLines} />
-                <button className='see-recipe-btn'>See recipe</button>
+                <button onClick={()=> navigate(`/recipe/${recipe.label}`)} className='see-recipe-btn'>See recipe</button>
             </div>
         </div>
     )

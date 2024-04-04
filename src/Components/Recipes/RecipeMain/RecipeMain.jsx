@@ -7,7 +7,7 @@ import { RecipeContext } from "../../../RecipeContext.js"
 export const RecipeMain = () =>{
 
     const { recipes,setRecipes } = useContext(RecipeContext)
-
+    console.log(recipes);
     return (
         <div className="recipe-main">
             <RecipeSearch setrecipes={setRecipes} recipes={recipes}/>

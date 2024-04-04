@@ -15,7 +15,7 @@ export const RecipeList = () =>{
             && recipes.map(recipe => <RecipeItem key={uniqid()} recipe={recipe.recipe}/>)
             }
             
-            {recipes !== null && recipes.length == 0 
+            {recipes == null && recipes.length == 0 
                 && <h1 style={{textAlign:'center', width:'100%', marginBottom:'2rem'}}>No recipes found</h1>
             }
         
